@@ -1,0 +1,24 @@
+{
+  "name": "tmdltube_01",
+  "version": "1.0.0",
+  "description": "* front | * home.pug",
+  "main": "index.js",
+  "scripts": {
+    "test": "node back/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wltmdl/tmdltube_01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wltmdl/tmdltube_01/issues"
+  },
+  "homepage": "https://github.com/wltmdl/tmdltube_01#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^3.0.2"
+  }
+}

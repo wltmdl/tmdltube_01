@@ -1,0 +1,68 @@
+:root{
+    --test_blue:  rgb(46, 96, 139);
+    --test_blue2:  cadetblue;
+    --test_green:  rgb(46, 139, 83);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#topContent{
+    position: fixed;
+    left: 120px;
+    width: 100%;
+    height: 70px;
+    background-color:  var(--test_green);
+
+    display:flex;
+    
+}
+#sideContent{
+    position: fixed;
+    width: 13%;
+    height: 100%;
+
+}
+#sideElements{
+    position:absolute;
+    top: 70px;
+   
+    height: 100%;
+    width: 100%;
+    background: var(--test_blue2);
+    
+}
+#sideContent > h4 {
+    width: 120px;
+    height: 70px;
+    color: yellow;
+    background-color: var(--test_blue);
+
+}
+#topContent > #start > h1{
+    
+    color: yellow;
+}
+#topContent > #start{
+    width: 20%;
+    
+    display: flex;
+}
+#topContent > #center{
+    width: 50%;
+}
+#topContent > #end{
+    width: 30%;
+}
+
+main{
+    position: fixed;
+    top: 70px;
+    left: 13%;
+    width: 100%;
+    height: 100%;
+    background:  rgb(252, 232, 207);
+}
