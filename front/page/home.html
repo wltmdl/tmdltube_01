@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><!--link(rel="stylesheet", type="text/css",href="./assets/css/index.css")--><style> :root{
+    --test_blue:  rgb(46, 96, 139);
+    --test_blue2:  cadetblue;
+    --test_green:  rgb(46, 139, 83);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#topContent{
+    position: fixed;
+    left: 120px;
+    width: 100%;
+    height: 70px;
+    background-color:  var(--test_green);
+
+    display:flex;
+    z-index: 1;
+}
+#sideContent{
+    position: fixed;
+    width: 13%;
+    height: 100%;
+
+}
+#sideElements{
+    position:absolute;
+    top: 70px;
+   
+    height: 100%;
+    width: 100%;
+    background: var(--test_blue2);
+    
+}
+#sideContent > h4 {
+    width: 120px;
+    height: 70px;
+    color: yellow;
+    background-color: var(--test_blue);
+
+}
+#topContent > #start > h1{
+    
+    color: yellow;
+}
+#topContent > #start{
+    width: 20%;
+    
+    display: flex;
+}
+#topContent > #center{
+    width: 50%;
+}
+#topContent > #end{
+    width: 30%;
+    
+}
+
+main{
+    position: fixed;
+    top: 70px;
+    left: 13%;
+    width: 100%;
+    height: 100%;
+    background:  rgb(252, 232, 207);
+}
+</style>
+<title>Document</title>
+</head>
+<body> 
+    <div id="topcontent">
+        <div id="topContent">
+            <div id="start"> 
+                <h4>|</h4><h1>logo</h1><h4>start content</h4></div><div id="center"> <h4>|center content</h4></div>
+                <div class="topitems" id="end">
+                    <h4>|end content</h4>
+                    <div class="dropdown" data-dropdown>
+                        <button name="dropdown-link" class="link " data-dropdown-button>dropdown</button>
+                        <div class="dropdown-menu information-grid">
+                            <div>
+                                <div class="dropdown-head">에스프레소</div>
+                                <div class="dropdown-items">
+                                    <a href="#">아메리카노</a>
+                                    <a href="#">카페라떼</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown-head">차</div>
+                                <div class="dropdown-items">
+                                    <a href="#">보이차</a>
+                                    <a href="#">레몬사과페퍼민트</a>
+                                    <a href="#">얼그레이</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown-head">스무디</div>
+                                <div class="dropdown-items">
+                                    <a href="#">초코</a>
+                                    <a href="#">바나나딸기</a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown-head">기타</div>
+                                <div class="dropdown-items">
+                                    <div class="test">
+                                        <a href="#">
+                                            <span>탄산수</span>
+                                        </a>
+                                    </div>
+                                    <div class="test">
+                                        <a href="#">
+                                            <span>산펠레그리노</span>
+                                        </a>
+                                    </div>
+                                    <a href="#">
+                                        <span>물</span>
+                                    </a>
+                                    <a href="#">
+                                        <span>키즈음료</span>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sidecontent"> 
+            <!DOCTYPE html>
+            <div id="sideContent">
+                <h4>side Contents</h4>
+                <div id="sideElements">
+                    <h4>side Elements</h4>
+                </div>
+            </div>
+        </div>
+    <main>
+        <h1>HOME</h1>
+        
+     
+        <script src="../assets/js/index.js" defer></script>
+        <style>
+            .dropdown-items > a, .test > a{
+                background-color: tomato;
+                width: 100%;
+            }
+            .test > a {
+                padding-right: 10px;
+            }
+            .topitems{
+                display: flex;
+                background-color:thistle;
+                
+            }
+            .dropdown.active > .link,
+            .link:hover{
+                color:red;
+            }
+            .dropdown{
+                position: relative;
+                background-color: salmon;
+                height: 60px;
+                width: 60px;
+            }
+            .link{
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                height: 100%;
+                width: 100%;
+            }
+            .dropdown-menu{
+                position: absolute;
+                left: 0;
+                top:calc(100% + .2rem);
+                background-color: rosybrown;
+                padding: .5rem;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-15px);
+                transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+            }
+
+            .dropdown.active > .link + .dropdown-menu {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateY(0);
+                
+            }
+
+            .information-grid{
+                display: grid;
+                grid-template-columns: repeat(2,120px);
+                gap:1.5rem;
+            }
+
+            .dropdown-items{
+                display: flex;
+                flex-direction: column;
+                gap:.5rem;
+            }
+
+            
+        </style>
+    </main></body></html>

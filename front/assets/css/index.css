@@ -56,6 +56,7 @@
 }
 #topContent > #end{
     width: 30%;
+
 }
 
 main{
@@ -66,3 +67,4 @@ main{
     height: 100%;
     background:  rgb(252, 232, 207);
 }
+
