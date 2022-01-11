@@ -35,7 +35,7 @@
     background: var(--test_blue2);
     
 }
-#sideContent > h4 {
+#sideContent > .side {
     width: 120px;
     height: 70px;
     color: yellow;
@@ -59,6 +59,39 @@
     
 }
 
+
+
+.side-menu{
+    padding-bottom: 25px;
+}
+.side-menu-item{
+    padding: 5px;
+    background-color: chartreuse;
+
+}
+.side-menu-item > a {
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    background-color: cornflowerblue;
+}
+
+.side-menu-item:hover{
+    background-color: chocolate;
+}
+
+.side-icon{
+    font-size: 35px;
+}
+.side-icon.active{
+    background-color: crimson;
+}
+.the-side-content.active{
+    display: none;
+}
+#sideContent.active{
+    width: 9%;
+}
 main{
     position: fixed;
     top: 70px;
@@ -66,6 +99,9 @@ main{
     width: 100%;
     height: 100%;
     background:  rgb(252, 232, 207);
+}
+.mains{
+    display: flex;
 }
 </style>
 <title>Document</title>
@@ -130,81 +166,127 @@ main{
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
+    <div class="mains">
         <div id="sidecontent"> 
+            <script src="../assets/js/sideElements.js" defer></script>
             <!DOCTYPE html>
             <div id="sideContent">
-                <h4>side Contents</h4>
+                <div class="side">
+                    <h4>side Contents</h4>
+                    <button class="side-icon"> 목록 </button>
+                </div>
+                
                 <div id="sideElements">
                     <h4>side Elements</h4>
+                    <div class="the-side-content">
+    
+                        
+                        <div class="side-menu side-up">
+                            <div class="side-menu-item">
+                                <a href="#"><span>up-first</span></a>
+                            </div>
+                            <div class="side-menu-item">
+                                <a href="#"><span>up-second</span></a>
+                            </div>
+                            <div class="side-menu-item">
+                                <a href="#"><span>up-third</span></a>
+                            </div>
+                        </div>
+                        <div class="side-menu side-middle">
+                            <div class="side-menu-item">
+                                <a href="#"><span>mid-first</span></a>
+                            </div>
+                            <div class="side-menu-item">
+                                <a href="#"><span>mid-second</span></a>
+                            </div>
+                            <div class="side-menu-item">
+                                <a href="#"><span>mid-third</span></a>
+                            </div>
+                        </div>
+                        <div class="side-menu side-down">
+                            <div class="side-menu-item">
+                                <a href="#"><span>down-first</span></a>
+                            </div>
+                            <div class="side-menu-item">
+                                <a href="#"><span>down-second</span></a>
+                            </div>
+                            <div class="side-menu-item">
+                                <a href="#"><span>down-third</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    <main>
-        <h1>HOME</h1>
         
-     
-        <script src="../assets/js/index.js" defer></script>
-        <style>
-            .dropdown-items > a, .test > a{
-                background-color: tomato;
-                width: 100%;
-            }
-            .test > a {
-                padding-right: 10px;
-            }
-            .topitems{
-                display: flex;
-                background-color:thistle;
-                
-            }
-            .dropdown.active > .link,
-            .link:hover{
-                color:red;
-            }
-            .dropdown{
-                position: relative;
-                background-color: salmon;
-                height: 60px;
-                width: 60px;
-            }
-            .link{
-                background-color: rgba(0, 0, 0, 0);
-                border: none;
-                height: 100%;
-                width: 100%;
-            }
-            .dropdown-menu{
-                position: absolute;
-                left: 0;
-                top:calc(100% + .2rem);
-                background-color: rosybrown;
-                padding: .5rem;
-                opacity: 0;
-                pointer-events: none;
-                transform: translateY(-15px);
-                transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-            }
-
-            .dropdown.active > .link + .dropdown-menu {
-                opacity: 1;
-                pointer-events: auto;
-                transform: translateY(0);
-                
-            }
-
-            .information-grid{
-                display: grid;
-                grid-template-columns: repeat(2,120px);
-                gap:1.5rem;
-            }
-
-            .dropdown-items{
-                display: flex;
-                flex-direction: column;
-                gap:.5rem;
-            }
-
+        <main>
+            <h1>HOME</h1>
             
-        </style>
-    </main></body></html>
+            
+            <script src="../assets/js/index.js" defer></script>
+            <style>
+                .dropdown-items > a, .test > a{
+                    background-color: tomato;
+                    width: 100%;
+                }
+                .test > a {
+                    padding-right: 10px;
+                }
+                .topitems{
+                    display: flex;
+                    background-color:thistle;
+                    
+                }
+                .dropdown.active > .link,
+                .link:hover{
+                    color:red;
+                }
+                .dropdown{
+                    position: relative;
+                    background-color: salmon;
+                    height: 60px;
+                    width: 60px;
+                }
+                .link{
+                    background-color: rgba(0, 0, 0, 0);
+                    border: none;
+                    height: 100%;
+                    width: 100%;
+                }
+                .dropdown-menu{
+                    position: absolute;
+                    left: 0;
+                    top:calc(100% + .2rem);
+                    background-color: rosybrown;
+                    padding: .5rem;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateY(-15px);
+                    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+                }
+    
+                .dropdown.active > .link + .dropdown-menu {
+                    opacity: 1;
+                    pointer-events: auto;
+                    transform: translateY(0);
+                    
+                }
+    
+                .information-grid{
+                    display: grid;
+                    grid-template-columns: repeat(2,120px);
+                    gap:1.5rem;
+                }
+    
+                .dropdown-items{
+                    display: flex;
+                    flex-direction: column;
+                    gap:.5rem;
+                }
+    
+                
+            </style>
+        </main>
+    </div>
+</body></html>
